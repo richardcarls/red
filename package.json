@@ -41,34 +41,49 @@
         "*"
     ],
     "contributes": {
-        "colors": [
-            {
-                "id": "red.highlightForeground",
-                "description": "Color for highlighting matched characters.",
-                "defaults": {
-                    "dark": "editorWarning.foreground",
-                    "light": "editorWarning.foreground",
-                    "highContrast": "editorWarning.foreground"
-                }
-            },
-            {
-                "id": "red.highlightBackground",
-                "description": "Color for highlighting matched characters.",
-                "defaults": {
-                    "dark": "editorWarning.background",
-                    "light": "editorWarning.background",
-                    "highContrast": "editorWarning.background"
-                }
-            }
-        ],
         "configuration": {
             "type": "object",
             "title": "red",
             "properties": {
-                "red.showInProblemsPane": {
-                    "type": "boolean",
-                    "default": true,
-                    "markdownDescription": "Show matched ranges in the Problems pane"
+                "red.rules": {
+                    "type": "array",
+                    "minItems": 1,
+                    "default": [],
+                    "items": {
+                        "required": [
+                            "name",
+                            "pattern",
+                            "message"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "A unique diagnostic code for this rule (in snake-case by convention)."
+                            },
+                            "pattern": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "A regular expression pattern for this rule."
+                            },
+                            "message": {
+                                "type": "string",
+                                "minLength": 1,
+                                "description": "The diagnostic message to display for this rule."
+                            },
+                            "severity": {
+                                "type": "string",
+                                "enum": [
+                                    "Error",
+                                    "Warning",
+                                    "Information",
+                                    "Hint"
+                                ],
+                                "default": "Warning",
+                                "description": "The severity of the generated diagnostic for this rule."
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -9,4 +9,11 @@ suite('Extension Test Suite', () => {
 	test('Exports "activate" function', () => {
 		assert.ok(red.activate, 'Missing activate export');
 	});
+
+  test('Provides declared configuration', () => {
+    const config = vscode.workspace.getConfiguration('red');
+
+    assert.ok(config.has('showInProblemsPane'));
+    assert.ok(config.has('rules'));
+  });
 });

@@ -1,5 +1,5 @@
 [![Github Package Version](https://img.shields.io/github/package-json/v/richardcarls/vscode-red)](https://marketplace.visualstudio.com/items?itemName=richardcarls.red)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/richardcarls.red)](https://marketplace.visualstudio.com/items?itemName=richardcarls.red)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/richardcarls.regex-diag)](https://marketplace.visualstudio.com/items?itemName=richardcarls.regex-diag)
 
 # red
 
@@ -31,6 +31,6 @@ The configuration options can be found in the `contributes.configuration` sectio
 
 ## Release Notes
 
-### 0.0.1
+### 0.1.0
 
-Coming soon...
+Iniital release

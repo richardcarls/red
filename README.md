@@ -16,7 +16,7 @@ Extension for [Visual Studio Code](https://code.visualstudio.com/) that lets you
   | $` | Inserts the portion of the string that precedes the matched substring. |
   | $' | Inserts the portion of the string that follows the matched substring. |
   | $n | Where n is a positive integer less than 100, inserts the nth parenthesized submatch string, provided the first argument was a RegExp object. Note that this is 1-indexed. If a group n is not present (e.g., if group is 3), it will be replaced as a literal (e.g., $3). |
-  | $<Name> | Where Name is a capturing group name. If the  group is not in the match, or not in the regular expression, or if a  string was passed as the first argument to replace instead of a regular expression, this resolves to a literal (e.g., $<Name>). Only available in browser versions supporting named capturing groups. |
+  | $\<Name\> | Where Name is a capturing group name. If the  group is not in the match, or not in the regular expression, or if a  string was passed as the first argument to replace instead of a regular expression, this resolves to a literal (e.g., $\<Name\>). Only available in browser versions supporting named capturing groups. |
   
   source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_a_parameter)
 - Diagnostic ranges are highlighted in the editor according to severity level

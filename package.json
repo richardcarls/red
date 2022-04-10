@@ -2,10 +2,24 @@
     "name": "red",
     "displayName": "red",
     "description": "red lets you configure simple code diagnostics from regular expressions.",
-    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/richardcarls/vscode-red"
+    },
+    "bugs": {
+        "url": "https://github.com/richardcarls/vscode-red/issues"
+    },
+    "keywords": [
+        "linter",
+        "linters",
+        "regex",
+        "highlight",
+        "problems"
+    ],
+    "version": "0.1.0",
     "license": "MIT",
     "author": {
-        "name": "Richard Carls",
+        "name": "Rick Carls",
         "email": "richard.j.carls@gmail.com",
         "url": "https://github.com/richardcarls/"
     },
@@ -31,6 +45,13 @@
         "typescript": "^4.5.5",
         "@vscode/test-electron": "^2.1.3"
     },
+    "publisher": "richardcarls",
+    "galleryBanner": {
+        "color": "#C20F08",
+        "theme": "dark"
+    },
+    "icon": "assets/icon-dark.png",
+    "qna": "https://github.com/richardcarls/vscode-red/issues",
     "engines": {
         "vscode": "^1.0.0"
     },

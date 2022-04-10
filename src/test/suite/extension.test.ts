@@ -11,9 +11,8 @@ suite('Extension Test Suite', () => {
 	});
 
   test('Provides declared configuration', () => {
-    const config = vscode.workspace.getConfiguration('red');
+    const config = vscode.workspace.getConfiguration('regex-diag');
 
-    assert.ok(config.has('showInProblemsPane'));
     assert.ok(config.has('rules'));
   });
 });

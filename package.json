@@ -1,13 +1,13 @@
 {
     "name": "regex-diag",
-    "displayName": "red",
-    "description": "red lets you configure simple code diagnostics from regular expressions.",
+    "displayName": "regex-diag",
+    "description": "regex-diag lets you configure simple code diagnostics from regular expressions.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/richardcarls/vscode-red"
+        "url": "https://github.com/richardcarls/vscode-regex-diag"
     },
     "bugs": {
-        "url": "https://github.com/richardcarls/vscode-red/issues"
+        "url": "https://github.com/richardcarls/vscode-regex-diag/issues"
     },
     "keywords": [
         "linter",
@@ -51,7 +51,7 @@
         "theme": "dark"
     },
     "icon": "assets/icon-dark.png",
-    "qna": "https://github.com/richardcarls/vscode-red/issues",
+    "qna": "https://github.com/richardcarls/vscode-regex-diag/issues",
     "engines": {
         "vscode": "^1.0.0"
     },
@@ -64,9 +64,9 @@
     "contributes": {
         "configuration": {
             "type": "object",
-            "title": "red",
+            "title": "regex-diag",
             "properties": {
-                "red.rules": {
+                "regex-diag.rules": {
                     "type": "array",
                     "minItems": 1,
                     "default": [],

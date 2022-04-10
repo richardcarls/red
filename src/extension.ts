@@ -4,13 +4,13 @@ import * as vscode from 'vscode';
 import { Linter, LinterRule } from './Linter';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('red extension is now active');
+	console.log('regex-diag extension is now active');
 
   const linters: Linter[] = [];
 
   vscode.workspace.onDidChangeConfiguration(
     (e) => {
-      if (e.affectsConfiguration('red')) {
+      if (e.affectsConfiguration('regex-diag')) {
         console.log('Configuration change detected, recreating linters..');
         createLinters();
       }
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
       linters.pop()!.dispose();
     }
 
-    const config = vscode.workspace.getConfiguration('red');
+    const config = vscode.workspace.getConfiguration('regex-diag');
     const rules = config.get('rules') as LinterRule[];
     
     for (let rule of rules) {

@@ -4,6 +4,7 @@ export interface LinterRule {
   name: string;
   languages?: string[];
   pattern: string;
+  flags?: string;
   message: string;
   severity: string;
 }
@@ -23,7 +24,7 @@ export class Linter implements vscode.Disposable {
   constructor(rule: LinterRule) {
     this.name = rule.name;
     this.languages = rule.languages;
-    this.pattern = new RegExp(rule.pattern, 'g');
+    this.pattern = new RegExp(rule.pattern, rule.flags ?? 'g');
     this.message = rule.message;
 
     const [fgColor, bgColor] = (() => {

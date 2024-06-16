@@ -33,17 +33,17 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.0.0",
         "@types/glob": "^7.2.0",
         "@types/mocha": "^9.1.0",
         "@types/node": "14.x",
+        "@types/vscode": "^1.0.0",
         "@typescript-eslint/eslint-plugin": "^5.16.0",
         "@typescript-eslint/parser": "^5.16.0",
+        "@vscode/test-electron": "^2.1.3",
         "eslint": "^8.11.0",
         "glob": "^7.2.0",
         "mocha": "^9.2.2",
-        "typescript": "^4.5.5",
-        "@vscode/test-electron": "^2.1.3"
+        "typescript": "^4.5.5"
     },
     "publisher": "richardcarls",
     "galleryBanner": {
@@ -104,7 +104,16 @@
                                 "description": "The severity of the generated diagnostic for this rule."
                             }
                         }
-                    }
+                    },
+                    "description": "An array of diagnostic rule definitions."
+                },
+                "regex-diag.exclude": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "An array of filesystem glob patterns to be excluded from processing."
                 }
             }
         }

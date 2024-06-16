@@ -16,7 +16,7 @@
         "highlight",
         "problems"
     ],
-    "version": "0.2.0",
+    "version": "0.3.0",
     "license": "MIT",
     "author": {
         "name": "Rick Carls",
@@ -85,12 +85,17 @@
                             "languages": {
                                 "type": "array",
                                 "minLength": 1,
-                                "description": "Languages this rule applies to."
+                                "description": "Languages this rule applies to. If omitted, applies to any language mode."
                             },
                             "pattern": {
                                 "type": "string",
                                 "minLength": 1,
                                 "description": "A regular expression pattern for this rule."
+                            },
+                            "flags": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "Flags to enable on the pattern. If omitted, default is \"g\""
                             },
                             "message": {
                                 "type": "string",

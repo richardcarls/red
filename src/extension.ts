@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const config = vscode.workspace.getConfiguration('regex-diag');
     const rules = config.get('rules') as LinterRule[];
-    const exclude = config.get('exclude') as string[];
+    // const exclude = config.get('exclude') as string[];
 
     for (let rule of rules) {
       const linter = new Linter(rule);

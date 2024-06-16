@@ -16,7 +16,7 @@
         "highlight",
         "problems"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "author": {
         "name": "Rick Carls",
@@ -39,7 +39,7 @@
         "@types/vscode": "^1.0.0",
         "@typescript-eslint/eslint-plugin": "^5.16.0",
         "@typescript-eslint/parser": "^5.16.0",
-        "@vscode/test-electron": "^2.1.3",
+        "@vscode/test-electron": "^2.4.0",
         "eslint": "^8.11.0",
         "glob": "^7.2.0",
         "mocha": "^9.2.2",

@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 import { Linter, LinterRule } from './Linter';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('regex-diag extension is now active');
+  console.log('regex-diag extension is now active');
 
   const linters: Linter[] = [];
 
@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
     },
     context,
-    context.subscriptions,
+    context.subscriptions
   );
 
   createLinters();
@@ -29,14 +29,15 @@ export function activate(context: vscode.ExtensionContext) {
 
     const config = vscode.workspace.getConfiguration('regex-diag');
     const rules = config.get('rules') as LinterRule[];
-    
+    // const exclude = config.get('exclude') as string[];
+
     for (let rule of rules) {
       const linter = new Linter(rule);
-  
+
       linters.push(linter);
-  
+
       context.subscriptions.push(linter);
-  
+
       console.log(`created linter for rule ${rule.name}`);
     }
   }

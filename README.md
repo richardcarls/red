@@ -19,6 +19,30 @@ Extension for [Visual Studio Code](https://code.visualstudio.com/) that lets you
     source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_a_parameter)
 - Diagnostic ranges are highlighted in the editor according to severity level
 
+## Example
+
+```json
+// settings.json
+"regex-diag.rules": [
+  {
+    "name": "example-rule",
+    "languages": ["html"],
+    "pattern": "([lL]orem ipsum.+?)$",
+    "message": "Lorem ipsum line detected: $1",
+    "severity": "Warning"
+  }
+]
+```
+
+```html
+<!-- some-file.html -->
+<p>Some text here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, assumenda.</p>
+```
+
+Will produce a warning diagnotic in html files only:
+
+> Lorem text detected: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, assumenda.
+
 ## Requirements
 
 This extension requires Visual Studio Code v1.0.0 or higher.
@@ -26,13 +50,3 @@ This extension requires Visual Studio Code v1.0.0 or higher.
 ## Extension Settings
 
 The configuration options can be found in the `contributes.configuration` section of the package.json.
-
-## Release Notes
-
-### 0.1.1
-
-Renamed extension and fixed readme formatting
-
-### 0.1.0
-
-Iniital release

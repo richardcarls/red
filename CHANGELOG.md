@@ -1,9 +1,12 @@
 # Change Log
 
-All notable changes to the "red" extension will be documented in this file.
+## 0.2.0
+Rules now support languages
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.1.1
 
-## [Unreleased]
+Renamed extension and fixed readme formatting
 
-- Initial release
+## 0.1.0
+
+Iniital release
